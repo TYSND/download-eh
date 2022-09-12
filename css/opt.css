@@ -1,0 +1,16 @@
+/* 去除复制限制 */
+pre {
+	user-select: auto !important;
+}
+code {
+	user-select: auto !important;
+}
+
+/* 去除关注才能查看全文 */
+#article_content {
+	height: auto !important;
+	overflow: auto !important;
+}
+.hide-article-box {
+	display: none !important;
+}

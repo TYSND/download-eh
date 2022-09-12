@@ -1,0 +1,28 @@
+{
+  // 清单版本号，建议使用 版本 2，版本 1 是旧的，已弃用，不建议使用
+  "manifest_version": 3, 
+  "name": "download-eh", // 插件名称
+  "version": "1.8.6",  // 插件版本
+  // 这里写些废话，举个栗子，‘应产品要求，杀个程序祭天’
+  "description": "This is an extension for your chrome", 
+  "icons": {
+    "16": "images/eh16.png",
+    "48": "images/eh48.png",
+    "128": "images/eh128.png"
+  },
+  // 定义对页面内容进行操作的脚本
+  "content_scripts": [
+    {
+      "js":["scripts/opt.js"],
+      "css": ["css/opt.css"],
+      "matches":["https://e-hentai.org/s/*"] // 只在这些站点下 content_scripts会运行
+    }
+  ],
+  // 数组，声明插件所需要的权限，这里就是很危险的存在了，想干坏事的你是不是很激动！
+  "permissions": [
+    "cookies",
+    "management",
+    "tabs",
+    "contextMenus"
+  ]
+}
